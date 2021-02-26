@@ -1,18 +1,20 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include "test.h"
 
 typedef struct human{
     char name[20];
     char family_name[20];
-    char gender;
+    char gender[0];
     int weight;
     int height;
-}pacient;
+}Pacient;
 
 int main()
 {
     int menu; // User choice
-    int size; // Quantity of structures
+    int size = 0; // Quantity of structures
+    Pacient *t = calloc(size, sizeof(Pacient)); // Dynamic structure
 
     do{
         Instructions();
@@ -20,7 +22,7 @@ int main()
         switch(menu)
         {
         case 1:
-            AddElement;
+            size = AddElement(size,t);
             break;
         case 2:
             DeleteElement;
@@ -40,6 +42,8 @@ int main()
         }
     }while(menu != 0);
 
+    free(t);
+    t = NULL;
 
     return 0;
 }
