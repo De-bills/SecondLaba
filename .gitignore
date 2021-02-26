@@ -1,5 +1,5 @@
-.vs/
-lab.sln
-lab.vcxproj
-lab.vcxproj.filters
-lab.vcxproj.user
+bin/
+obj/
+SecondLaba.cbp
+SecondLaba.depend
+SecondLaba.layout
