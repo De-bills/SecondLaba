@@ -1,29 +1,28 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "var.h"
+#include "test.h"
 
-int Instructions()
-{
-    printf("--------------------------\\\n");
-    printf("Make a choice:            |\n");
-    printf("1) Add                    |\n");
-    printf("2) Delete                 |\n");
-    printf("3) List                   |\n");
-    printf("4) Sort                   |\n");
-    printf("--------------------------/\n");
-    printf("Your choice : ");
-};
+typedef struct human{
+    char name[20];
+    char family_name[20];
+    char gender[0];
+    int weight;
+    int height;
+}Pacient;
+=======
 
 int main()
 {
     int menu; // User choice
-
+    int size = 0; // Quantity of structures
+    Pacient *t = calloc(size, sizeof(Pacient)); // Dynamic structure
     do{
         Instructions();
         scanf("%d",&menu);
         switch(menu)
         {
         case 1:
+            size = AddElement(size,t);
             break;
         case 2:
             DeleteElement;
@@ -43,6 +42,8 @@ int main()
         }
     }while(menu != 0);
 
+    free(t);
+    t = NULL;
 
     return 0;
 }
