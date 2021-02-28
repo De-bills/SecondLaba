@@ -9,13 +9,13 @@ typedef struct human{
     int weight;
     int height;
 }Pacient;
+=======
 
 int main()
 {
     int menu; // User choice
     int size = 0; // Quantity of structures
     Pacient *t = calloc(size, sizeof(Pacient)); // Dynamic structure
-
     do{
         Instructions();
         scanf("%d",&menu);
